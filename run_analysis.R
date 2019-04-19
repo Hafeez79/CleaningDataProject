@@ -93,5 +93,5 @@ names(SubData)<-gsub("Mag", "Magnitude", names(SubData))
 
 SummaryData <-aggregate(. ~Subject + AllActivity, SubData, mean)
 
-write.csv2(x = SummaryData, file = "SummaryData.csv")
+write.table(SummaryData, './SummaryData.csv',row.names=FALSE,sep='\t')
 
